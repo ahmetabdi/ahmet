@@ -11,10 +11,13 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+
+import logoSoundcloud from '@/images/soundcloud.jpg'
+import logoBabylon from '@/images/babylon.png'
+import logoDatacamp from '@/images/datacamp.png'
+import logoFundingcircle from '@/images/fundingcircle.png'
+import logoKyan from '@/images/kyan.png'
+
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -187,35 +190,42 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'SoundCloud',
+      title: 'Software Engineer',
+      logo: logoSoundcloud,
+      start: '2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
+      company: 'Babylon',
+      title: 'Software Engineer',
+      logo: logoBabylon,
+      start: '2022',
+      end: '2023',
+    },
+    {
+      company: 'DataCamp',
+      title: 'Software Engineer',
+      logo: logoDatacamp,
+      start: '2020',
+      end: '2022',
+    },
+    {
+      company: 'Funding Circle UK',
+      title: 'Senior Ruby Developer',
+      logo: logoFundingcircle,
+      start: '2019',
+      end: '2020',
+    },
+    {
+      company: 'Kyan',
+      title: 'Senior Ruby Developer',
+      logo: logoKyan,
+      start: '2016',
       end: '2019',
-    },
-    {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
     },
   ]
 
