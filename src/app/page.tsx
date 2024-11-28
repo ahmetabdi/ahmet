@@ -224,7 +224,7 @@ function Resume() {
       company: 'Kyan',
       title: 'Senior Ruby Developer',
       logo: logoKyan,
-      start: '2016',
+      start: '2013',
       end: '2019',
     },
   ]
