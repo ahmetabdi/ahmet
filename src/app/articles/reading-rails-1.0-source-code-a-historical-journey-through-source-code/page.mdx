@@ -1,0 +1,70 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import beurs from './beurs.jpg'
+
+export const article = {
+  author: 'Ahmet Abdi',
+  date: '2025-09-05',
+  title: 'Rails World 2025 - Reading Rails 1.0: A Historical Journey Through Source Code',
+  description:
+    'What makes Rails Rails itself? What core parts of Rails still remain after 20 years? In this talk, Masafumi Okura dived into the source code of Rails 1.0 and explored internals.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Rails is great. In fact, Rails has been great since the very beginning. However, in terms of technical details, Rails 1.0 was very different from Rails 8. Lots of things have changed, many frameworks have been introduced and overall quality has been polished. This leads to an interesting question. What makes Rails Rails itself? What core parts of Rails still remain after 20 years? In this talk, Masafumi Okura dived into the source code of Rails 1.0 and explored internals.
+
+<Image src={beurs} alt="" />
+
+### Speaker Background
+
+Masafumi Okura is a freelance web developer from Tokyo who organizes the Kaigi on Rails conference in Japan and hosts several Ruby community events. Masafumi maintains [Alba](https://github.com/okuramasafumi/alba), a JSON serialization gem with over 2 million downloads, and regularly leads code reading sessions in the Japanese Ruby community.
+
+### Rails History Overview
+
+Rails 1.0.0 was released approximately 20 years ago with only 52,000 lines of code, compared to Rails 8's 350,000+ lines - about seven times smaller. Despite this growth, five core components have remained consistent from version 1 to version 8: ActionMailer, ActionPack, ActiveRecord, ActiveSupport, and Rails itself. The MVC pattern has been present since day one, though ActiveModel didn't exist in version 1.
+
+### Examining Rails 1.0 Components
+
+### ActiveSupport
+
+- Core extensions like `blank?` method had similar implementations to modern Rails
+- Inflector was present but simpler, supporting conventions over configuration
+- The code feels familiar even though it's 20 years old
+- Interestingly, the `present?` method didn't exist in Rails 1.0
+
+### Scaffold Generation
+
+- The scaffold generator created controllers, views, and even functional tests
+- Generated test files inherited from TestUnit with assertions
+- Functional tests were automatically generated in version 1
+
+### ActiveRecord
+
+- No `where` method existed in Rails 1.0 - queries were built using the `find` method
+- Dynamic finders (like `find_by_email_and_name`) were implemented using metaprogramming
+- Associations (has_many, belongs_to) were present and implemented with metaprogramming
+- Validations were simpler but functional, with readable code
+
+### What Makes Rails Special
+
+Two key aspects have defined Rails since version 1:
+
+1. **Ruby's power**: The language's flexibility and metaprogramming capabilities enabled Rails to create beautiful DSLs and hide complexity behind elegant interfaces
+2. **Developer happiness**: From the beginning, Rails prioritized making developers' lives better
+
+### What Next?
+
+- Check out [Alba](https://github.com/okuramasafumi/alba) as an alternative to ActiveModelSerializer if having issues
+- Watch [Robby Russell's talk](https://www.youtube.com/watch?v=eT7hJz_GXGo) from Rails World for more about nostalgic Rails features
+- Look into [Kaigi on Rails conference](https://kaigionrails.org/2025/) happening in Japan in a few weeks (26/09/2025)
+
+https://github.com/okuramasafumi
+
+https://okuramasafumi.com
+
+https://rubyonrails.org/world/2025/day-2/masafumi-okura
